@@ -1,0 +1,10 @@
+<div class="container">
+  <app-user
+    *ngFor="let user of users; index as i"
+    [imageSrc]="user.imageSrc"
+    [firstName]="user.firstName"
+    [lastName]="user.lastName"
+    [job]="user.job"
+    (click)="handleUserClick(i)"
+  ></app-user>
+</div>

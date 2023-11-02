@@ -1,0 +1,23 @@
+.no-user {
+  height: 100%;
+  width: 850px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  align-items: center;
+  justify-content: center;
+}
+
+.no-user__greeting {
+  font-size: 50px;
+}
+
+.no-user__motivational {
+  font-weight: 400;
+  font-size: 18px;
+  width: 620px;
+  text-align: justify;
+  text-wrap: balance;
+  line-height: 1.8;
+  color: rgba(63, 63, 120, 0.78);
+}

@@ -1,0 +1,19 @@
+<div *ngIf="activeUser; else noUserSelected" class="details">
+  <h2>{{ activeUser.firstName }}s</h2>
+</div>
+
+<ng-template #noUserSelected>
+  <div class="no-user">
+    <h1 class="no-user__greeting">Welcome!🌞</h1>
+    <h2 class="no-user__motivational">
+      "Success💫 begins with the right mindset😊 and a passion🥰 for what you
+      do. As you embark on your work today🏢, remember that each task✅, no
+      matter how small, is a stepping stone🪨 toward your goals🎯. Stay focused,
+      stay positive😄, and believe in your abilities🤹. Your dedication and hard
+      work will lead you to the path of success📈. Embrace the challenges, for
+      they are opportunities in disguise🌠. You've got this, and you're capable
+      of achieving🎖️great things. Enjoy your work, and let your passion drive
+      you towards excellence!🏆"
+    </h2>
+  </div>
+</ng-template>
