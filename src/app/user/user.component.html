@@ -1,4 +1,4 @@
-<div class="user">
+<div [ngClass]="{ user: !isSelected, user__active: isSelected }">
   <img class="user__image" src="{{ imageSrc }}" alt="" />
   <div class="user__details">
     <span class="user__name">{{ firstName }} {{ lastName }}</span>

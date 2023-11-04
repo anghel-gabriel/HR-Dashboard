@@ -1,5 +1,50 @@
 <div *ngIf="activeUser; else noUserSelected" class="details">
-  <h2>{{ activeUser.firstName }}s</h2>
+  <div class="details__header">
+    <img src="{{ activeUser.imageSrc }}" alt="" class="header__avatar" />
+    <div class="header__data">
+      <h1 class="data__fullname">
+        {{ activeUser.firstName }} {{ activeUser.lastName }}
+      </h1>
+      <h2 class="data__location">
+        📍{{ activeUser.address.city }}, {{ activeUser.address.country }}
+      </h2>
+    </div>
+  </div>
+  <div class="details__body">
+    <div class="category">
+      <h2 class="title">Experience</h2>
+      <div class="experiences">
+        <div
+          class="experience"
+          *ngFor="let experience of activeUser.experience"
+        >
+          <h3 class="experience__title">{{ experience.company }}</h3>
+          <h4 class="experience__period-job">
+            {{ experience.period }} | {{ experience.job }}
+          </h4>
+        </div>
+      </div>
+    </div>
+    <div class="category">
+      <h2 class="title">Studies</h2>
+      <ul class="studies__list">
+        <li class="study" *ngFor="let study of activeUser.studies">
+          <p class="study__university">{{ study.study__university }}</p>
+          <p class="study__period-domain">
+            {{ study.period }} | {{ study.domain }}
+          </p>
+        </li>
+      </ul>
+    </div>
+    <div class="category">
+      <h2 class="title">Skills</h2>
+      <ul class="skills__list">
+        <li class="skill" *ngFor="let skill of activeUser.skills">
+          {{ skill }}
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>
 
 <ng-template #noUserSelected>

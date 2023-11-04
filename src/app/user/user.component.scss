@@ -12,11 +12,19 @@ span {
   overflow: hidden;
 
   &:hover {
-    background-color: white;
+    background-color: rgb(243, 247, 255);
   }
 
   &:hover .user__image {
-    height: 100px; /* Adjust the height as per your requirement */
+    height: 100px;
+  }
+}
+
+.user__active {
+  @extend .user;
+  background-color: white;
+  &:hover {
+    background-color: white;
   }
 }
 

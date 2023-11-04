@@ -6,8 +6,9 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./user.component.scss'],
 })
 export class UserComponent {
-  @Input() imageSrc: string = '';
-  @Input() firstName: string = '';
-  @Input() lastName: string = '';
-  @Input() job: string = '';
+  @Input() imageSrc!: string;
+  @Input() firstName!: string;
+  @Input() lastName!: string;
+  @Input() job!: string;
+  @Input() isSelected!: boolean;
 }

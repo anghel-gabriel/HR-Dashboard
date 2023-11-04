@@ -2,4 +2,27 @@
   width: 350px;
   background-color: rgb(230, 238, 255);
   height: 100%;
+  overflow-y: scroll;
+  transition: overflow-y 0.3s;
+}
+
+.container::-webkit-scrollbar {
+  width: 12px;
+  cursor: pointer;
+}
+
+.container::-webkit-scrollbar-thumb {
+  background: rgb(202, 215, 239);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.container::-webkit-scrollbar-thumb:hover {
+  background: rgb(185, 198, 222);
+  cursor: pointer;
+}
+
+.container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  cursor: pointer;
 }
